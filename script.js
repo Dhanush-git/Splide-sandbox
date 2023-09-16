@@ -3,14 +3,19 @@ var splide = new Splide( '.splide',{
     speed: 500,
     perPage: 1,
     focus: 'center',
-    gap: '20px',
     updateOnMove: true,
     trimSpace: false,
     omitEnd: true,
     mediaQuery: 'min',
     pagination: false,
+    arrows: false,
+    direction: 'ttb',
+    height: '100%',
     breakpoints: {
         475: {
+            gap: '20px',
+            direction: 'ltr',
+            arrows: true,
             perPage: 3,
         },
         1024: {
