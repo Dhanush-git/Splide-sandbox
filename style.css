@@ -1,6 +1,7 @@
 body, html {
     padding: 0;
     margin: 0;
+    font-family: sans-serif;
 }
 
 carousel {
@@ -45,13 +46,9 @@ carousel {
 }
 
 .my-carousel-progress {
+    width: 100%;
     background: #ccc;
-    position: absolute;
-    bottom: 1.5em;
-    width: 90%;
-    z-index: 1;
-    transform: translateX(-50%);
-    left: 50%;
+    height: 2px;
 }
 
 .my-carousel-progress-bar {
@@ -61,15 +58,26 @@ carousel {
     width: 0;
 }
 
+.progress-bar{
+    display: flex;
+    width: 95%;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 1.5em;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+}
+
 @media screen and (min-width: 475px) {
     carousel {
         aspect-ratio: 8/3;
         margin-bottom: 25px;
     }
 
-    .my-carousel-progress {
-        background: #ccc;
-        position: absolute;
+    .progress-bar {
         bottom: 1.5em;
         width: 30%;
         z-index: 1;
