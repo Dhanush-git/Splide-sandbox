@@ -1,0 +1,79 @@
+body, html {
+    padding: 0;
+    margin: 0;
+}
+
+carousel {
+    display: block;
+    position: relative;
+}
+
+.splide__slide > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* scale: 0.9;
+    transition: scale 0.1s ease-in-out; */
+}
+
+/* .splide__slide.is-active > img {
+    scale: 1;
+    transition: scale 0.2s ease-in-out;
+} */
+
+.splide__pagination {
+    bottom: -20px;
+}
+
+.splide__arrow {
+    background: white;
+    padding: 5px;
+    opacity: 1;
+    width: 30px;
+    height: 30px;
+    transition: opacity0.2s  ease-in-out;
+}
+
+.splide__arrow:disabled {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.splide__arrow svg {
+    width: 100%;
+    height: 100%;
+}
+
+.my-carousel-progress {
+    background: #ccc;
+    position: absolute;
+    bottom: 1.5em;
+    width: 90%;
+    z-index: 1;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.my-carousel-progress-bar {
+    background: black;
+    height: 2px;
+    transition: width 400ms ease;
+    width: 0;
+}
+
+@media screen and (min-width: 475px) {
+    carousel {
+        aspect-ratio: 8/3;
+        margin-bottom: 25px;
+    }
+
+    .my-carousel-progress {
+        background: #ccc;
+        position: absolute;
+        bottom: 1.5em;
+        width: 30%;
+        z-index: 1;
+        transform: none;
+        left: 1em;
+    }
+}
