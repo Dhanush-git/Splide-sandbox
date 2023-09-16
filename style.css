@@ -78,10 +78,11 @@ carousel {
     }
 
     .progress-bar {
-        bottom: 1.5em;
+        position: relative;
+        margin: 1em;
         width: 30%;
-        z-index: 1;
         transform: none;
-        left: 1em;
+        left: unset;
+        bottom: unset;
     }
 }
